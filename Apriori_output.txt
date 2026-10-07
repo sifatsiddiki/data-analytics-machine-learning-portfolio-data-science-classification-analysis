@@ -1,0 +1,56 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 20 -T 0 -C 0.7 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     SET09120_CW1_40735842_CLEANING-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Discretize-B10-M-1.0-Rfirst-last-precision6
+Instances:    1000
+Attributes:   9
+              checking_status
+              credit_history
+              purpose
+              credit_amount
+              saving_status
+              personal_status
+              age
+              job
+              class
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.15 (150 instances)
+Minimum metric <confidence>: 0.7
+Number of cycles performed: 17
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 21
+
+Size of set of large itemsets L(2): 55
+
+Size of set of large itemsets L(3): 27
+
+Best rules found:
+
+ 1. checking_status=no checking credit_amount='(-inf-2067.4]' 178 ==> class=good 163    <conf:(0.92)> lift:(1.31) lev:(0.04) [38] conv:(3.34)
+ 2. checking_status=no checking job=skilled 266 ==> class=good 239    <conf:(0.9)> lift:(1.28) lev:(0.05) [52] conv:(2.85)
+ 3. checking_status=no checking personal_status=male single 232 ==> class=good 208    <conf:(0.9)> lift:(1.28) lev:(0.05) [45] conv:(2.78)
+ 4. checking_status=no checking 394 ==> class=good 348    <conf:(0.88)> lift:(1.26) lev:(0.07) [72] conv:(2.51)
+ 5. checking_status=no checking credit_history=existing paid 187 ==> class=good 164    <conf:(0.88)> lift:(1.25) lev:(0.03) [33] conv:(2.34)
+ 6. checking_status=no checking saving_status=<100 191 ==> class=good 165    <conf:(0.86)> lift:(1.23) lev:(0.03) [31] conv:(2.12)
+ 7. credit_history=critical/other existing credit personal_status=male single 181 ==> class=good 156    <conf:(0.86)> lift:(1.23) lev:(0.03) [29] conv:(2.09)
+ 8. credit_history=critical/other existing credit job=skilled 185 ==> class=good 155    <conf:(0.84)> lift:(1.2) lev:(0.03) [25] conv:(1.79)
+ 9. credit_history=critical/other existing credit 293 ==> class=good 243    <conf:(0.83)> lift:(1.18) lev:(0.04) [37] conv:(1.72)
+10. saving_status=no known savings 183 ==> class=good 151    <conf:(0.83)> lift:(1.18) lev:(0.02) [22] conv:(1.66)
+11. checking_status=<0 274 ==> saving_status=<100 219    <conf:(0.8)> lift:(1.33) lev:(0.05) [53] conv:(1.94)
+12. purpose=radio/tv job=skilled 195 ==> class=good 152    <conf:(0.78)> lift:(1.11) lev:(0.02) [15] conv:(1.33)
+13. purpose=radio/tv 280 ==> class=good 218    <conf:(0.78)> lift:(1.11) lev:(0.02) [21] conv:(1.33)
+14. credit_amount='(2067.4-3884.8]' 292 ==> class=good 227    <conf:(0.78)> lift:(1.11) lev:(0.02) [22] conv:(1.33)
+15. credit_amount='(2067.4-3884.8]' job=skilled 208 ==> class=good 161    <conf:(0.77)> lift:(1.11) lev:(0.02) [15] conv:(1.3)
+16. credit_amount='(-inf-2067.4]' personal_status=male single 202 ==> class=good 154    <conf:(0.76)> lift:(1.09) lev:(0.01) [12] conv:(1.24)
+17. personal_status=male single job=skilled 340 ==> class=good 251    <conf:(0.74)> lift:(1.05) lev:(0.01) [13] conv:(1.13)
+18. personal_status=male single 548 ==> class=good 402    <conf:(0.73)> lift:(1.05) lev:(0.02) [18] conv:(1.12)
+19. credit_amount='(-inf-2067.4]' job=skilled 271 ==> class=good 198    <conf:(0.73)> lift:(1.04) lev:(0.01) [8] conv:(1.1)
+20. class=bad 300 ==> saving_status=<100 217    <conf:(0.72)> lift:(1.2) lev:(0.04) [36] conv:(1.42)
+
